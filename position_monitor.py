@@ -4,8 +4,10 @@ Paper-only: never sends transactions or touches wallets.
 """
 
 import json
+import math
 import os
 import urllib.parse
+import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -24,8 +26,11 @@ def write_output(name: str, value: str) -> None:
 def fetch_pair(contract: str, pair_address: str) -> dict:
     url = SEARCH_URL + urllib.parse.quote(contract)
     req = urllib.request.Request(url, headers={"User-Agent": "agent-hello-world/1.0"})
-    with urllib.request.urlopen(req, timeout=20) as response:
-        payload = json.load(response)
+    try:
+        with urllib.request.urlopen(req, timeout=20) as response:
+            payload = json.load(response)
+    except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
+        raise RuntimeError(f"Failed to fetch pair data: {exc}") from exc
     wanted = pair_address.lower()
     pairs = payload.get("pairs") or []
     for pair in pairs:
@@ -38,6 +43,10 @@ def evaluate(position: dict, pair: dict) -> dict:
     price = float(pair["priceUsd"])
     liquidity = float((pair.get("liquidity") or {}).get("usd") or 0)
     entry = float(position["entry_fill_usd"])
+    if not math.isfinite(price) or price <= 0:
+        raise RuntimeError(f"Invalid live price for {position['asset']}: {price}")
+    if not math.isfinite(entry) or entry <= 0:
+        raise RuntimeError(f"Invalid entry_fill_usd in position: {entry}")
     ret_pct = (price / entry - 1.0) * 100.0
 
     if position.get("structural_gate") != "PASS":
@@ -82,6 +91,8 @@ def evaluate(position: dict, pair: dict) -> dict:
 
 def main() -> None:
     position_path = Path(os.getenv("POSITION_FILE", "positions/pons.json"))
+    if not position_path.is_file():
+        raise SystemExit(f"Position file not found: {position_path}")
     with position_path.open("r", encoding="utf-8") as f:
         position = json.load(f)
     pair = fetch_pair(position["contract"], position["pair_address"])

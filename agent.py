@@ -1,7 +1,9 @@
 """Dependency-free Bitcoin price monitor."""
 
 import json
+import math
 import os
+import urllib.error
 import urllib.request
 
 
@@ -16,9 +18,22 @@ def fetch_bitcoin_price() -> float:
         API_URL,
         headers={"Accept": "application/json", "User-Agent": "agent-hello-world/1.0"},
     )
-    with urllib.request.urlopen(request, timeout=20) as response:
-        payload = json.load(response)
-    return float(payload["bitcoin"]["usd"])
+    try:
+        with urllib.request.urlopen(request, timeout=20) as response:
+            payload = json.load(response)
+        price = float(payload["bitcoin"]["usd"])
+    except (
+        urllib.error.URLError,
+        TimeoutError,
+        json.JSONDecodeError,
+        KeyError,
+        TypeError,
+        ValueError,
+    ) as exc:
+        raise SystemExit(f"Failed to fetch Bitcoin price: {exc}") from exc
+    if not math.isfinite(price) or price <= 0:
+        raise SystemExit(f"Invalid Bitcoin price returned: {price}")
+    return price
 
 
 def write_github_output(name: str, value: str) -> None:
@@ -29,7 +44,12 @@ def write_github_output(name: str, value: str) -> None:
 
 
 def main() -> None:
-    threshold = float(os.getenv("BTC_ALERT_ABOVE_USD", "150000"))
+    try:
+        threshold = float(os.getenv("BTC_ALERT_ABOVE_USD", "150000"))
+    except ValueError as exc:
+        raise SystemExit("BTC_ALERT_ABOVE_USD must be numeric") from exc
+    if not math.isfinite(threshold) or threshold <= 0:
+        raise SystemExit("BTC_ALERT_ABOVE_USD must be a positive number")
     force_alert = os.getenv("FORCE_ALERT", "false").lower() == "true"
     price = fetch_bitcoin_price()
     should_alert = force_alert or price >= threshold

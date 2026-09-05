@@ -63,8 +63,23 @@ def main() -> None:
     max_slippage_pct = float(s.get("max_slippage_pct", 1.0))
     max_liquidity_share_pct = float(s.get("max_liquidity_share_pct", 0.10))
 
+    numeric_fields = {
+        "observed_price_usd": observed_price,
+        "liquidity_usd": liquidity,
+        "paper_allocation_usd": requested,
+        "max_slippage_pct": max_slippage_pct,
+        "max_liquidity_share_pct": max_liquidity_share_pct,
+    }
     blocking = []
     notes = []
+    for name, value in numeric_fields.items():
+        if not math.isfinite(value):
+            blocking.append(f"{name} must be finite")
+    if max_slippage_pct < 0:
+        blocking.append("max slippage percent must be non-negative")
+    if max_liquidity_share_pct <= 0 or max_liquidity_share_pct > 100:
+        blocking.append("max liquidity share percent must be in (0, 100]")
+
     if structural_gate != "PASS":
         blocking.append(f"structural gate is {structural_gate}, not PASS")
     if observed_price <= 0:
