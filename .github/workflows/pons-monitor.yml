@@ -14,7 +14,7 @@ on:
     branches: [main]
     paths:
       - agent.py
-      - .github/workflows/bitcoin-monitor.yml
+      - .github/workflows/pons-monitor.yml
 
 permissions:
   contents: read

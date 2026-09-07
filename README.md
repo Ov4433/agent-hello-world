@@ -29,7 +29,7 @@ The scheduled run uses that threshold. It will not create duplicates while an op
 ## What each file does
 
 - `agent.py`: calls DexScreener for the default PONS pair and decides whether the threshold was crossed.
-- `.github/workflows/bitcoin-monitor.yml`: supplies the free runtime and creates the GitHub issue.
+- `.github/workflows/pons-monitor.yml`: supplies the free runtime and creates the GitHub issue.
 - `README.md`: iPhone setup and testing instructions.
 
 ## Next step: Azure
