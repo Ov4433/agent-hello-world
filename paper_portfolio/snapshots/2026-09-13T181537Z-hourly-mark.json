@@ -1,0 +1,65 @@
+{
+  "timestamp_utc": "2026-09-13T18:15:37Z",
+  "portfolio_id": "regime-framework-10k-2026-09-09",
+  "cash_usd": 3257.737519195861,
+  "marks_usd": {
+    "BTC": 77312.44,
+    "ETH": 2504.27,
+    "SOL": 100.99,
+    "SUI": 0.7199,
+    "BNB": 720.87,
+    "UNI": 6.33,
+    "HYPE": 78.45,
+    "AERO": 0.566
+  },
+  "mark_sources": {
+    "BTC": "CoinGecko BTC/USD volume-weighted spot page crawled 2026-09-13",
+    "ETH": "CoinGecko ETH/USD volume-weighted spot page crawled 2026-09-13",
+    "SOL": "CoinGecko SOL/USD volume-weighted spot page crawled 2026-09-13",
+    "SUI": "CoinGecko SUI/USD volume-weighted spot page crawled 2026-09-13",
+    "BNB": "CoinGecko BNB/USD volume-weighted spot page crawled 2026-09-13",
+    "UNI": "CoinGecko UNI/USD volume-weighted spot page crawled 2026-09-13",
+    "HYPE": "CoinGecko HYPE/USD volume-weighted spot page crawled 2026-09-13",
+    "AERO": "CoinGecko AERO/USD volume-weighted spot page crawled 2026-09-13"
+  },
+  "position_values_usd": {
+    "BTC": 1955.8251950417086,
+    "ETH": 2000.3274943494723,
+    "SOL": 976.8814083962455,
+    "SUI": 443.50665352390376,
+    "BNB": 484.9118794564116,
+    "UNI": 243.05320353068547,
+    "HYPE": 244.3180232454482,
+    "AERO": 248.69002383444555
+  },
+  "portfolio_nav_usd": 9855.251400574183,
+  "passive_benchmark_nav_usd": 9861.45263076774,
+  "alpha_vs_benchmark_usd": -6.201230193557421,
+  "alpha_vs_benchmark_bps": -6.288353679466674,
+  "decisions": {
+    "BTC": "HOLD",
+    "ETH": "HOLD_NO_ADD_ETF_ROTATION_POSITIVE_BUT_NO_NEW_ECOSYSTEM_ACCELERATION_CONFIRMATION",
+    "SOL": "HOLD_NO_ADD_CURRENT_DEX_RUN_RATE_BELOW_TRAILING_WEEK_AND_STABLECOINS_CONTRACTING",
+    "SUI": "HOLD_NO_ADD_STABLECOIN_GROWTH_NOT_CONVERTING_TO_CURRENT_DEX_OR_PERP_ACCELERATION",
+    "BNB": "HOLD_NO_ADD_RWA_VALUE_GROWTH_IS_NOT_SECONDARY_USAGE_AND_CURRENT_BSC_DEX_RUN_RATE_IS_WEAK",
+    "UNI": "HOLD_NO_ADD_NON_ROBINHOOD_THROUGHPUT_REMAINS_BELOW_ENTRY_SIGNAL_BUT_NO_NEW_THESIS_BREAK",
+    "HYPE": "HOLD_NO_ADD_PERP_VOLUME_COOLING_PERSISTS_BUT_OI_AND_VALUE_CAPTURE_REMAIN_INTACT",
+    "AERO": "HOLD_NO_ADD_TOKENIZED_EQUITY_THESIS_INTACT_BUT_CURRENT_AERODROME_VOLUME_IS_BELOW_TRAILING_PACE"
+  },
+  "regime_notes": [
+    "No ecosystem crossed a fresh prospective paper-trade threshold and no held position developed a new material thesis or structural failure that justifies a portfolio action since the prior mark.",
+    "Sui stablecoin capitalization remains up about 8.86% over seven days, but current spot DEX volume is only about $13.52M versus $282.58M over seven days and perps are about $15.41M versus $141.83M over seven days. Net inflows are only about $8.5K over 24 hours. The retained-capital substrate is positive, but it is not presently translating into discretionary trading velocity; SUI remains HOLD_NO_ADD rather than a new trim because this deterioration was already known at the prior hourly decision and the price has modestly improved since that mark.",
+    "Solana remains a high-activity continuation regime rather than a new migration signal: roughly $1.55B of DEX volume over 24 hours versus $18.33B over seven days, stablecoins down about 0.94% over seven days, and about $6.9M of 24-hour net inflows. SOL remains HOLD_NO_ADD.",
+    "Ethereum ETF flows provide a positive institutional-rotation input: U.S. spot Ether ETFs took in about $216M on September 11 while spot Bitcoin ETFs had net outflows. This is financially substantive direct-asset demand, but by itself it does not establish a fresh speculative ecosystem regime or justify adding to the existing 20% ETH core allocation in this run.",
+    "BNB Chain's reported +$3.62B 2026 RWA value growth is an asset-stock/value-growth metric, not transaction volume, secondary trading, collateral use, or protocol revenue. Current BSC spot DEX run rate remains below its trailing-week average, so the RWA headline is not treated as confirmation for a BNB add.",
+    "Base tokenized-equity secondary trading remains the strongest verified RWA usage thesis already represented by the AERO starter. Aerodrome current DEX volume is about $168M over 24 hours versus about $3.13B over seven days, so the venue is not freshly accelerating and AERO remains HOLD_NO_ADD. Separately, raw USDC transfer-volume headlines on Aerodrome are discounted where market-making/repricing loops can dominate transfer counts or notional.",
+    "Uniswap aggregate activity remains cooler than at the UNI paper entry and still heavily influenced by Robinhood Chain; no verified structural break, fee-to-UNI value-capture failure, or fresh selective-wallet distribution reversal surfaced. UNI remains HOLD_NO_ADD.",
+    "Hyperliquid perp volume remains below the qualifying pace, while open interest stays high near $14.24B and fee-funded holder value capture remains active. No new structural or wallet-distribution failure surfaced; HYPE remains HOLD_NO_ADD.",
+    "Jupiter/JUP does not clear a new threshold despite renewed price attention because Solana itself is not freshly accelerating, Jupiter TVL is down materially over seven days, and much of the observable JUP demand comes from the protocol-directed Litterbox buyback rather than newly independent selective-wallet convergence.",
+    "XRPL/Ripple institutional-credit and collateral headlines are monitored but do not yet qualify: the lending amendments remain short of the validator activation threshold in current reporting, and the direct incremental XRP demand from the new credit stack is not yet demonstrated by current utilization.",
+    "Paper portfolio NAV is approximately $9,855.25 versus $9,861.45 for the frozen passive benchmark, trailing by about $6.20 or 6.29 bps. No paper trade was made; state.json and the immutable trade ledger remain unchanged."
+  ],
+  "paper_trade": null,
+  "alert_threshold_crossed": false,
+  "notes": "Hourly prospective mark. No qualifying threshold, new material thesis break, or paper trade. State and immutable trade ledger left unchanged."
+}
