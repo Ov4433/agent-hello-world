@@ -1,0 +1,65 @@
+{
+  "timestamp_utc": "2026-09-13T14:48:33Z",
+  "portfolio_id": "regime-framework-10k-2026-09-09",
+  "cash_usd": 3257.737519195861,
+  "marks_usd": {
+    "BTC": 77169.88,
+    "ETH": 2491.19,
+    "SOL": 100.62,
+    "SUI": 0.7169,
+    "BNB": 719.14,
+    "UNI": 6.33,
+    "HYPE": 78.32,
+    "AERO": 0.5648
+  },
+  "mark_sources": {
+    "BTC": "CoinGecko BTC/USD volume-weighted spot snapshot, 2026-09-13 run",
+    "ETH": "CoinGecko ETH/USD volume-weighted spot snapshot, 2026-09-13 run",
+    "SOL": "CoinGecko SOL/USD volume-weighted spot snapshot, 2026-09-13 run",
+    "SUI": "CoinGecko SUI/USD volume-weighted spot snapshot, 2026-09-13 run",
+    "BNB": "CoinGecko BNB/USD volume-weighted spot snapshot, 2026-09-13 run",
+    "UNI": "CoinGecko UNI/USD volume-weighted spot snapshot, 2026-09-13 run",
+    "HYPE": "CoinMarketCap HYPE/USD live spot snapshot, 2026-09-13 run",
+    "AERO": "CoinGecko AERO/USD volume-weighted spot snapshot, 2026-09-13 run"
+  },
+  "position_values_usd": {
+    "BTC": 1952.2187580982472,
+    "ETH": 1989.8796258584186,
+    "SOL": 973.3023795705539,
+    "SUI": 441.65845243962576,
+    "BNB": 483.7481501411958,
+    "UNI": 243.05320353068547,
+    "HYPE": 243.91316227639896,
+    "AERO": 248.16276583338313
+  },
+  "portfolio_nav_usd": 9833.67401694437,
+  "passive_benchmark_nav_usd": 9840.807366108042,
+  "alpha_vs_benchmark_usd": -7.133349163672392,
+  "alpha_vs_benchmark_bps": -7.248743825877341,
+  "decisions": {
+    "BTC": "HOLD",
+    "ETH": "HOLD",
+    "SOL": "HOLD_NO_ADD_DEX_REACCELERATION_MODERATE_BUT_STABLECOIN_RETENTION_WEAK_AND_TOKEN_LEADERSHIP_NEGATIVE",
+    "SUI": "HOLD_NO_ADD_STABLECOIN_GROWTH_NOT_CONFIRMED_BY_CURRENT_DEX_PACE_OR_NET_FLOWS",
+    "BNB": "HOLD_NO_ADD_RWA_GROWTH_IS_PRIMARILY_ASSET_STOCK_ISSUANCE_EVIDENCE_NOT_FRESH_SECONDARY_TRADING_CONFIRMATION",
+    "UNI": "HOLD_NO_ADD_NO_NEW_INDEPENDENT_WALLET_OR_THROUGHPUT_CONFIRMATION",
+    "HYPE": "HOLD_NO_ADD_REPEAT_ACCUMULATOR_EVIDENCE_IS_ALREADY_IN_ENTRY_THESIS_AND_NO_NEW_INDEPENDENT_CONFIRMATION",
+    "AERO": "HOLD_NO_ADD_BASE_RWA_SECONDARY_TRADING_THESIS_INTACT_BUT_AERODROME_PROTOCOL_VOLUME_AND_WALLET_EVIDENCE_HAVE_NOT_YET_RECONFIRMED"
+  },
+  "regime_notes": [
+    "No ecosystem or asset crossed a fresh prospective paper-trade threshold in this run. The portfolio remains fully compliant with the long-only, structural-gate-first mandate; cash remains well above the normal 10% minimum.",
+    "Base remains constructive but not newly decisive. Chain DEX volume is about $1.25B/24h versus $6.78B/7d, roughly 1.36x the preceding-six-day daily pace, while stablecoins are approximately +0.4% over seven days. The already-recorded tokenized-equity secondary-trading breakout remains the important RWA signal, but Aerodrome protocol volume around $514M/24h is only modestly above its preceding-six-day pace and no new independent AERO wallet cohort was verified. AERO therefore remains HOLD_NO_ADD.",
+    "Arbitrum is the strongest unowned spot-DEX acceleration anomaly in the current chain screen: about $308M/24h versus $1.24B/7d, nearly 2x the preceding-six-day daily pace. However, approximately -$43M of 24h net flows, an imminent ARB unlock, weak token price behavior, and lack of direct ARB fee/value capture prevent qualification. This is ecosystem activity without a clean candidate asset.",
+    "Solana DEX volume is about $3.04B/24h versus $17.28B/7d, around 1.28x the preceding-six-day pace, but stablecoin supply is slightly down week over week and SOL remains materially negative over seven days. This reads as high capital velocity rather than a new retained-capital migration regime; SOL is HOLD with no add.",
+    "Sui stablecoins remain a constructive outlier at roughly +9% over seven days, but current DEX volume around $37M/24h remains below the trailing-week daily average and net inflows are negligible. No SUI add is justified.",
+    "BNB Chain has fresh RWA headlines showing large 2026 asset-stock growth, but the underlying reporting explicitly does not establish transaction volume, secondary liquidity, collateral use, or holder breadth. Older bStock/PancakeSwap data confirm that real tokenized-equity secondary trading exists on BNB Chain, but there is no fresh acceleration signal sufficient for a new BNB allocation. Existing BNB remains HOLD.",
+    "Monad remains rejected despite occasional perp-volume anomalies because the Perpl/Purple Summer mPoints and trading-reward program contaminates the core activity signal and MON carries substantial low-float/dilution risk.",
+    "UNI is approximately $6.33 versus the $6.45 paper entry. The fee-to-UNI-burn mechanism and tokenized-stock utilization thesis remain intact, but no fresh independent wallet convergence or renewed cross-chain throughput acceleration was verified. HOLD_NO_ADD.",
+    "HYPE is approximately $78.32 versus the $79.35 paper entry. Hyperliquid open interest and fee-funded value capture remain strong, but the fresh wallet article repeats the same 0x3305 accumulation already used in the entry thesis rather than providing independent confirmation. Dilution/unlock risk remains material. HOLD_NO_ADD.",
+    "AERO is approximately $0.5648 versus the $0.5596 execution mark and remains above its all-in average cost. The Base tokenized-stock secondary-market thesis remains valid, but the newest protocol and wallet data do not independently satisfy the confirmation-add standard. HOLD_NO_ADD.",
+    "Portfolio NAV is approximately $9,833.67 versus passive benchmark $9,840.81, trailing by about $7.13 or 7.25 bps. No position has developed a structural failure, material thesis invalidation, or independent confirmation strong enough to justify a trim, exit, or add. State.json and the immutable trade ledger remain unchanged."
+  ],
+  "paper_trade": null,
+  "alert_threshold_crossed": false,
+  "notes": "Hourly prospective mark. No qualifying threshold, material thesis/risk change, or paper trade. State and immutable trade ledger left unchanged."
+}
