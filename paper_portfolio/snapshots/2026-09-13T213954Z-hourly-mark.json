@@ -1,0 +1,64 @@
+{
+  "timestamp_utc": "2026-09-13T21:39:54Z",
+  "portfolio_id": "regime-framework-10k-2026-09-09",
+  "cash_usd": 3257.737519195861,
+  "marks_usd": {
+    "BTC": 77289.0,
+    "ETH": 2505.33,
+    "SOL": 101.19,
+    "SUI": 0.72,
+    "BNB": 721.71,
+    "UNI": 6.24,
+    "HYPE": 79.83,
+    "AERO": 0.56
+  },
+  "mark_sources": {
+    "BTC": "DefiLlama Bitcoin chain page BTC/USD price snapshot crawled 2026-09-13",
+    "ETH": "DefiLlama Ethereum chain page ETH/USD price snapshot crawled 2026-09-13",
+    "SOL": "DefiLlama Solana chain page SOL/USD price snapshot crawled 2026-09-13",
+    "SUI": "DefiLlama Sui chain page SUI/USD price snapshot crawled 2026-09-13",
+    "BNB": "DefiLlama BSC chain page BNB/USD price snapshot crawled 2026-09-13",
+    "UNI": "DefiLlama Uniswap protocol/token page UNI/USD price snapshot crawled 2026-09-13",
+    "HYPE": "DefiLlama Hyperliquid chain/protocol HYPE/USD price snapshot crawled 2026-09-13",
+    "AERO": "DefiLlama Aerodrome protocol/token page AERO/USD price snapshot crawled 2026-09-13"
+  },
+  "position_values_usd": {
+    "BTC": 1955.232217474686,
+    "ETH": 2001.1741870559338,
+    "SOL": 978.8160185722952,
+    "SUI": 443.568260226713,
+    "BNB": 485.4769272164008,
+    "UNI": 239.59747077906434,
+    "HYPE": 248.61577814766255,
+    "AERO": 246.05373382913345
+  },
+  "portfolio_nav_usd": 9856.27211249775,
+  "passive_benchmark_nav_usd": 9864.267610546029,
+  "alpha_vs_benchmark_usd": -7.995498048278023,
+  "alpha_vs_benchmark_bps": -8.105516155836975,
+  "decisions": {
+    "BTC": "HOLD",
+    "ETH": "HOLD",
+    "SOL": "HOLD_NO_ADD_CURRENT_DEX_RUN_RATE_BELOW_TRAILING_WEEK_AND_STABLECOINS_SLIGHTLY_CONTRACTING",
+    "SUI": "HOLD_NO_ADD_STABLECOIN_GROWTH_NOT_CONFIRMED_BY_CURRENT_DEX_ACTIVITY_OR_NET_FLOWS",
+    "BNB": "HOLD_NO_ADD_CURRENT_DEX_RUN_RATE_BELOW_TRAILING_WEEK_AND_PRIOR_INCENTIVE_CONTAMINATION_UNRESOLVED",
+    "UNI": "HOLD_NO_ADD_NON_ROBINHOOD_PROTOCOL_THROUGHPUT_HAS_COOLED_BUT_NO_PERSISTENT_THESIS_INVALIDATION_OR_WALLET_REVERSAL_VERIFIED",
+    "HYPE": "HOLD_NO_ADD_PERP_ACTIVITY_NOT_FRESHLY_ACCELERATING_AND_NO_NEW_INDEPENDENT_WALLET_CONFIRMATION_OR_REVERSAL_VERIFIED",
+    "AERO": "HOLD_NO_ADD_TOKENIZED_EQUITY_THESIS_REMAINS_INTACT_BUT_AERODROME_CURRENT_VOLUME_IS_BELOW_TRAILING_WEEK_AND_NO_SECOND_INDEPENDENT_CONFIRMATION_SURFACED"
+  },
+  "regime_notes": [
+    "No ecosystem or asset crossed a fresh prospective paper-trade threshold. Global DEX activity remains elevated on a weekly basis, but current 24-hour chain run rates generally do not show a clean new acceleration sufficient to justify another starter or scale-up.",
+    "Solana remains active, but current DEX volume is about $1.54B/24h versus $18.33B/7d while stablecoin supply is roughly -0.94% over seven days. That is ongoing velocity rather than a fresh retained-capital migration signal. Existing SOL remains HOLD with no add.",
+    "Sui stablecoin supply remains constructive at roughly +8.85% over seven days, but current DEX volume is only about $13.5M/24h versus $282.6M/7d and net inflows are negligible. The stablecoin growth is not yet confirmed by discretionary trading intensity, so existing SUI remains HOLD_NO_ADD.",
+    "BSC has a large RWA asset stock near $4.88B, but current DEX volume is about $635M/24h versus $10.30B/7d and prior incentive contamination remains unresolved. RWA issuance/asset stock alone is not treated as secondary-market usage or a qualifying speculative migration signal.",
+    "Robinhood Chain still shows large nominal DEX turnover, stablecoin growth and RWA balances, but current net inflows are negative and prior synthetic-volume/on-chain-maker contamination remains unresolved. Its raw user/volume metrics therefore remain discounted rather than promoted to a clean discretionary-flow signal.",
+    "Uniswap has cooled substantially from the protocol-acceleration condition that justified the UNI starter. Current aggregate DEX volume is about $2.0B/24h versus $21.26B/7d, with roughly $1.24B of the latest day coming from Robinhood Chain. Non-Robinhood throughput is therefore materially below its recent baseline. UNI is about $6.24 versus the $6.45 entry mark. However, no hard structural failure, verified selective-wallet distribution reversal, or failure of the protocol-fee-to-UNI-burn mechanism was established. One cooling window is insufficient under the framework's persistence requirement, so UNI remains HOLD_NO_ADD rather than TRIM.",
+    "Hyperliquid remains a large committed-capital venue, but current perp activity is not producing a fresh acceleration signal. HYPE is about $79.83 versus the $79.35 paper mark, and no sufficiently fresh independent-wallet convergence or distribution reversal was verified. The Assistance Fund/value-capture thesis remains intact while low-float/FDV and unlock dilution remain major caveats. HYPE remains HOLD_NO_ADD.",
+    "Aerodrome's tokenized-equity venue thesis remains financially substantive, and veAERO continues to capture exchange revenue, but current Aerodrome volume is roughly $168M-$236M/24h depending DefiLlama surface versus about $3.13B/7d. The disagreement between DefiLlama surfaces and the below-weekly-average run rate both argue against treating this run as independent confirmation. AERO is about $0.56 versus the $0.5596 entry mark, so AERO remains HOLD_NO_ADD pending renewed tokenized-equity secondary-volume acceleration or independent wallet/value-capture confirmation.",
+    "RWA issuance remains large on Ethereum (~$14.5B active RWA market cap), BSC (~$4.88B), Solana (~$2.45B), and smaller chains, but those balances are not themselves evidence of active secondary trading, collateral utilization, or direct token value capture. No new RWA-linked asset cleared all three requirements this run: real usage, direct value capture, and structural/flow confirmation.",
+    "Portfolio NAV is approximately $9,856.27 versus passive benchmark $9,864.27, trailing by about $8.00 or 8.11 bps. No existing paper position developed a material thesis/risk change that justifies an action, and no new candidate cleared the prospective threshold. State.json and the immutable trade ledger remain unchanged."
+  ],
+  "paper_trade": null,
+  "alert_threshold_crossed": false,
+  "notes": "Hourly prospective mark. No qualifying threshold, material thesis break, or paper trade. State and immutable trade ledger left unchanged."
+}
