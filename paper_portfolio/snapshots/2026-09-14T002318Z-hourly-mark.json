@@ -1,0 +1,73 @@
+{
+  "timestamp_utc": "2026-09-14T00:23:18Z",
+  "portfolio_id": "regime-framework-10k-2026-09-09",
+  "cash_usd": 3257.737519195861,
+  "marks_usd": {
+    "BTC": 76927.35,
+    "ETH": 2484.61,
+    "SOL": 99.64,
+    "SUI": 0.7045,
+    "BNB": 717.43,
+    "UNI": 6.17,
+    "HYPE": 77.62,
+    "AERO": 0.5593
+  },
+  "mark_sources": {
+    "BTC": "CoinGecko BTC/USD global volume-weighted spot snapshot during this run",
+    "ETH": "CoinGecko ETH/USD global volume-weighted spot snapshot during this run",
+    "SOL": "CoinGecko SOL/USD global volume-weighted spot snapshot during this run",
+    "SUI": "CoinGecko SUI/USD global volume-weighted spot snapshot during this run",
+    "BNB": "CoinGecko BNB/USD global volume-weighted spot snapshot during this run",
+    "UNI": "CoinGecko UNI/USD global volume-weighted spot snapshot during this run",
+    "HYPE": "CoinGecko HYPE/USD global volume-weighted spot snapshot during this run",
+    "AERO": "CoinGecko AERO/USD global volume-weighted spot snapshot during this run"
+  },
+  "position_values_usd": {
+    "BTC": 1946.083312307719,
+    "ETH": 1984.6237409447235,
+    "SOL": 963.8227897079108,
+    "SUI": 434.01922129127684,
+    "BNB": 482.597874344075,
+    "UNI": 236.90967863891458,
+    "HYPE": 241.73314167382648,
+    "AERO": 245.74616666184704
+  },
+  "portfolio_nav_usd": 9793.273444766153,
+  "passive_benchmark_nav_usd": 9811.146938595706,
+  "alpha_vs_benchmark_usd": -17.8734938295529,
+  "alpha_vs_benchmark_bps": -18.21753760433556,
+  "decisions": {
+    "BTC": "HOLD",
+    "ETH": "HOLD",
+    "SOL": "HOLD_NO_ADD_NO_FRESH_REGIME_CONFIRMATION",
+    "SUI": "HOLD_NO_ADD_STABLECOIN_GROWTH_NOT_MATCHED_BY_CURRENT_DEX_ACCELERATION",
+    "BNB": "HOLD_NO_ADD_CURRENT_DEX_PACE_AND_PRIOR_INCENTIVE_CONTAMINATION_DO_NOT_CLEAR_THRESHOLD",
+    "UNI": "HOLD_NO_ADD_CLEAN_NON_ROBINHOOD_ACTIVITY_REMAINS_COOL_BUT_NO_NEW_WALLET_REVERSAL_OR_STRUCTURAL_FAILURE",
+    "HYPE": "HOLD_NO_ADD_PERP_THROUGHPUT_REMAINS_COOL_WHILE_OI_AND_FEE_VALUE_CAPTURE_REMAIN_INTACT",
+    "AERO": "HOLD_NO_ADD_NEW_COINBASE_TOKENIZED_STOCK_CATALYST_IS_ISSUANCE_AND_COLLATERAL_ELIGIBILITY_NOT_YET_NEW_SECONDARY_OR_COLLATERAL_USAGE_CONFIRMATION"
+  },
+  "regime_notes": [
+    "No ecosystem or asset crossed a fresh prospective paper-trade threshold after incentive discounts and hard structural gates. No existing paper position developed a material new thesis break versus the immediately preceding run, so state.json and the immutable trade ledger remain unchanged.",
+    "Uniswap remains near $2.0B of 24h DEX volume, with roughly $1.237B coming from Robinhood Chain. The non-Robinhood component is therefore about $763M, still materially below the clean cross-chain activity that triggered the UNI entry. No fresh selective-wallet distribution reversal or structural failure surfaced, so UNI remains HOLD_NO_ADD.",
+    "Hyperliquid perps remain about $1.955B/24h versus $39.588B/7d, while open interest remains high near $14.238B. Holder revenue is about $584K/24h with zero protocol incentives reported. This is still cooled throughput rather than a thesis break; no fresh independent distribution evidence crossed the trim/exit threshold.",
+    "Aerodrome remains about $168.35M DEX volume/24h versus $3.129B/7d, with roughly $104.8K of holder revenue over 24h and zero 24h incentives reported. Broad venue velocity remains cool versus the weekly pace, but no fresh evidence invalidates the Base tokenized-equity secondary-trading thesis.",
+    "Base is processing roughly $561.94M of DEX volume over 24h versus $6.734B over seven days, with stablecoin supply up about 0.96% over seven days and RWA active market cap around $180.55M. This does not constitute a fresh broad Base acceleration.",
+    "Coinbase has now launched four tokenized U.S. equities on Base with about $7.5M of circulating supply and has described intended Aave collateral support. This is a real RWA product/composability catalyst, but $7.5M is issuance/supply rather than secondary trading, and collateral eligibility is not proof of realized collateral utilization. Without fresh stock-specific secondary turnover or utilization above the already-recorded Aerodrome threshold, it does not justify an AERO add.",
+    "Solana, Sui and BSC do not present a new full-threshold asset-level leader with clean discretionary-flow evidence, independent wallet convergence, direct value capture and structural clearance in this run.",
+    "Portfolio NAV is approximately $9,793.27 versus passive benchmark $9,811.15, trailing by about $17.87 or 18.22 bps. The one-hour improvement versus the previous mark is ordinary market movement, not a new framework signal."
+  ],
+  "paper_trade": null,
+  "alert_threshold_crossed": false,
+  "notes": "Hourly prospective mark. No qualifying new signal, material new thesis break, or paper trade. State and immutable trade ledger left unchanged.",
+  "sources": [
+    "https://defillama.com/protocol/uniswap",
+    "https://defillama.com/protocol/hyperliquid",
+    "https://defillama.com/protocol/aerodrome",
+    "https://defillama.com/chain/base",
+    "https://defillama.com/chain/solana",
+    "https://defillama.com/chain/sui",
+    "https://defillama.com/chain/bsc",
+    "https://www.galaxy.com/insights/research/coinbase-tokenized-stocks-base-third-party-issuer-sec-innovation-exemption",
+    "https://www.coingecko.com/"
+  ]
+}

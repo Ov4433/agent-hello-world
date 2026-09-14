@@ -1,0 +1,64 @@
+{
+  "timestamp_utc": "2026-09-13T22:05:32Z",
+  "portfolio_id": "regime-framework-10k-2026-09-09",
+  "cash_usd": 3257.737519195861,
+  "marks_usd": {
+    "BTC": 77265.62,
+    "ETH": 2508.35,
+    "SOL": 101.10,
+    "SUI": 0.7203,
+    "BNB": 720.85,
+    "UNI": 6.26,
+    "HYPE": 78.58,
+    "AERO": 0.5629
+  },
+  "mark_sources": {
+    "BTC": "CoinGecko BTC/USD volume-weighted spot snapshot during this run",
+    "ETH": "CoinGecko ETH/USD volume-weighted spot snapshot during this run",
+    "SOL": "CoinGecko SOL/USD volume-weighted spot snapshot during this run",
+    "SUI": "CoinGecko SUI/USD volume-weighted spot snapshot during this run",
+    "BNB": "CoinGecko BNB/USD volume-weighted spot snapshot during this run",
+    "UNI": "CoinGecko UNI/USD volume-weighted spot snapshot during this run",
+    "HYPE": "CoinGecko HYPE/USD liquid-market snapshot during this run",
+    "AERO": "CoinGecko AERO/USD global volume-weighted average across 55 exchanges / 123 markets during this run"
+  },
+  "position_values_usd": {
+    "BTC": 1954.6407577683299,
+    "ETH": 2003.586462502645,
+    "SOL": 977.9454439930728,
+    "SUI": 443.75308033514085,
+    "BNB": 484.8984259383166,
+    "UNI": 240.36541139053568,
+    "HYPE": 244.72288421449736,
+    "AERO": 247.32794066503428
+  },
+  "portfolio_nav_usd": 9854.977926003434,
+  "passive_benchmark_nav_usd": 9864.824170537504,
+  "alpha_vs_benchmark_usd": -9.846244534070138,
+  "alpha_vs_benchmark_bps": -9.98116577027003,
+  "decisions": {
+    "BTC": "HOLD",
+    "ETH": "HOLD",
+    "SOL": "HOLD_NO_ADD_VELOCITY_ELEVATED_BUT_STABLECOIN_RETENTION_AND_NEW_SELECTIVE_WALLET_CONFIRMATION_INSUFFICIENT",
+    "SUI": "HOLD_NO_ADD_STABLECOIN_GROWTH_NOT_CONFIRMED_BY_CURRENT_DEX_ACCELERATION",
+    "BNB": "HOLD_NO_ADD_CURRENT_DEX_RUN_RATE_COOLING_AND_INCENTIVE_CONTAMINATION_UNRESOLVED",
+    "UNI": "HOLD_NO_ADD_PROTOCOL_USAGE_AND_BURN_THESIS_INTACT_BUT_TOKEN_AND_VOLUME_PERSISTENCE_NOT_STRONG_ENOUGH_FOR_CONFIRMATION_ADD",
+    "HYPE": "HOLD_NO_ADD_FEE_VALUE_CAPTURE_REACCELERATED_BUT_NO_NEW_INDEPENDENT_WALLET_CONFIRMATION_AND_UNLOCK_DILUTION_REMAINS_MATERIAL",
+    "AERO": "HOLD_NO_ADD_BASE_RWA_SECONDARY_TRADING_THESIS_INTACT_BUT_AERODROME_SPECIFIC_VOLUME_NOT_FRESHLY_ACCELERATING_AND_NO_SECOND_INDEPENDENT_WALLET_CONFIRMATION"
+  },
+  "regime_notes": [
+    "No ecosystem or asset crossed a fresh prospective paper-trade threshold after applying incentive discounts and hard structural gates. No existing paper position developed a material thesis break requiring a trim or exit.",
+    "Base is the strongest near-term broad velocity watch: roughly $1.25B DEX volume over 24h versus about $6.78B over seven days, implying the latest day is above the preceding-six-day average. However, Base stablecoin supply is only modestly positive and Aerodrome-specific throughput is not showing the same fresh acceleration, so this does not yet constitute independent confirmation for an AERO add.",
+    "Aerodrome remains the leading venue in the already-recorded Base tokenized-equity secondary-trading regime. AERO is about $0.5629 versus the $0.5596 paper mark and roughly $0.56156 all-in average cost. CoinGecko shows about $14.8M of token trading volume, down materially day/day. The RWA thesis remains financially substantive, but no new wallet-quality or direct-value-capture confirmation cleared the scale-up threshold.",
+    "Solana DEX velocity remains elevated relative to its trailing-week pace, but stablecoin supply is flat-to-down and there is no clean new leader with independent selective-wallet convergence. Existing SOL remains HOLD without an add.",
+    "NEAR remains a regime watch because stablecoin supply and weekly DEX activity have expanded sharply and NEAR Intents gained another connectivity catalyst, but current net flows are negative and no asset-level candidate combines direct value capture, selective-wallet confirmation, and price persistence strongly enough to qualify.",
+    "BSC still has a large RWA asset stock and high weekly DEX activity, but current daily pace is below its recent average and prior trading/incentive contamination remains unresolved. RWA issuance/asset balances are not treated as secondary trading or discretionary speculation by themselves.",
+    "Stellar and XRPL continue to show substantial institutional RWA/stablecoin issuance and settlement growth, but their secondary-market trading and/or native-token value capture remain too weak or indirect for a qualifying asset signal. Issuance/AUM is kept distinct from actual trading, collateral utilization, and token accrual.",
+    "UNI is about $6.26 versus the $6.45 paper entry mark. Uniswap remains a major multi-chain venue and its fee-to-UNI burn mechanism is intact, but current token volume is down and protocol throughput has cooled from the entry trigger. No verified wallet-distribution reversal or structural failure surfaced, so HOLD_NO_ADD remains appropriate.",
+    "HYPE is about $78.58 versus the $79.35 paper entry mark. Hyperliquid protocol fees/revenue have reaccelerated, preserving the direct value-capture thesis, but the fresh whale reports found this run largely recycle previously observed accumulation rather than establish a new independent cohort. Low float/FDV and the October unlock remain material dilution risks, so HOLD_NO_ADD remains appropriate.",
+    "Portfolio NAV is approximately $9,854.98 versus passive benchmark $9,864.82, trailing by about $9.85 or 9.98 bps. State.json and the immutable trade ledger remain unchanged because no paper action is justified."
+  ],
+  "paper_trade": null,
+  "alert_threshold_crossed": false,
+  "notes": "Hourly prospective mark. No qualifying threshold, material thesis break, or paper trade. State and immutable trade ledger left unchanged."
+}

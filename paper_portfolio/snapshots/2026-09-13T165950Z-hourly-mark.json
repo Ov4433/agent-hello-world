@@ -1,0 +1,63 @@
+{
+  "timestamp_utc": "2026-09-13T16:59:50Z",
+  "portfolio_id": "regime-framework-10k-2026-09-09",
+  "cash_usd": 3257.737519195861,
+  "marks_usd": {
+    "BTC": 77280.35,
+    "ETH": 2504.39,
+    "SOL": 100.66,
+    "SUI": 0.716,
+    "BNB": 720.86,
+    "UNI": 6.26,
+    "HYPE": 78.43,
+    "AERO": 0.5668
+  },
+  "mark_sources": {
+    "BTC": "CoinGecko BTC/USD volume-weighted spot page crawled 2026-09-13",
+    "ETH": "CoinGecko ETH/USD volume-weighted spot page crawled 2026-09-13",
+    "SOL": "CoinGecko SOL/USD volume-weighted spot page crawled 2026-09-13",
+    "SUI": "CoinGecko SUI/USD volume-weighted spot page crawled 2026-09-13",
+    "BNB": "CoinGecko BNB/USD volume-weighted spot page crawled 2026-09-13",
+    "UNI": "CoinGecko UNI/USD volume-weighted spot page crawled 2026-09-13",
+    "HYPE": "CoinGecko HYPE/USD volume-weighted spot page crawled 2026-09-13",
+    "AERO": "CoinGecko AERO/USD volume-weighted spot page crawled 2026-09-13"
+  },
+  "position_values_usd": {
+    "BTC": 1955.0133925619411,
+    "ETH": 2000.4233463539774,
+    "SOL": 973.6893016057637,
+    "SUI": 441.10399211434236,
+    "BNB": 484.90515269736414,
+    "UNI": 240.36541139053568,
+    "HYPE": 244.25573694251756,
+    "AERO": 249.0415291684872
+  },
+  "portfolio_nav_usd": 9846.53538203079,
+  "passive_benchmark_nav_usd": 9855.135185333389,
+  "alpha_vs_benchmark_usd": -8.599803302598957,
+  "alpha_vs_benchmark_bps": -8.726215461151154,
+  "decisions": {
+    "BTC": "HOLD",
+    "ETH": "HOLD",
+    "SOL": "HOLD_NO_ADD_CURRENT_DEX_RUN_RATE_BELOW_TRAILING_WEEK_AND_STABLECOINS_CONTRACTING",
+    "SUI": "HOLD_NO_ADD_STABLECOIN_GROWTH_NOT_CONFIRMED_BY_FRESH_DEX_ACCELERATION",
+    "BNB": "HOLD_NO_ADD_CURRENT_BSC_DEX_RUN_RATE_BELOW_TRAILING_WEEK_AND_STABLECOINS_FLAT",
+    "UNI": "HOLD_NO_ADD_PROTOCOL_THROUGHPUT_COOLING_ALREADY_KNOWN_NO_NEW_INVALIDATION",
+    "HYPE": "HOLD_NO_ADD_PERP_VOLUME_COOLING_ALREADY_KNOWN_OI_VALUE_CAPTURE_INTACT",
+    "AERO": "HOLD_NO_ADD_NEW_STARTER_PRICE_STABLE_NO_INDEPENDENT_CONFIRMATION_YET"
+  },
+  "regime_notes": [
+    "No ecosystem crossed a fresh prospective paper-trade threshold and no held position developed a new material thesis or structural failure that justifies a portfolio action.",
+    "Solana remains highly active but is not freshly accelerating: direct-chain data show about $1.55B of spot DEX volume over 24h versus $18.33B over seven days, while stablecoin supply is down about 0.94% over seven days and net inflows are only about +$6.9M over 24h. This remains a high-velocity continuation regime rather than new retained-capital migration, so SOL is HOLD with no add.",
+    "BSC likewise fails the fresh-acceleration test at roughly $653M of DEX volume over 24h versus $10.30B over seven days, with stablecoin supply approximately flat to slightly down over seven days. Previously identified incentive contamination also remains unresolved. BNB stays HOLD with no add.",
+    "Base is processing roughly $550M of DEX volume over 24h versus $6.73B over seven days and stablecoins are up about 1% over seven days. Aerodrome itself is around $168M of 24h DEX volume versus $3.13B over seven days. The tokenized-equity secondary-trading/value-capture thesis that justified the AERO starter remains intact, but the latest run rate does not provide a fresh independent confirmation. AERO is about $0.5668 versus the $0.5596 paper entry mark and remains HOLD_NO_ADD.",
+    "Uniswap remains materially cooler than at the UNI entry signal: aggregate DEX volume is about $2.0B over 24h, with roughly $1.24B coming from Robinhood Chain and only about $0.76B from the remaining deployments combined. This cooling was already recorded in prior hourly marks, and no new verified whale-distribution reversal, structural failure, or break in the fee-to-UNI-burn mechanism surfaced. UNI remains HOLD_NO_ADD rather than a trim.",
+    "Hyperliquid perp activity remains below the prior qualifying pace at about $1.96B over 24h versus $39.6B over seven days, but open interest remains high near $14.24B and fee-funded value capture remains intact. The volume cooling was already known before this run and no new structural failure or distribution reversal surfaced. HYPE remains HOLD_NO_ADD.",
+    "Raydium is still economically productive, with roughly $334M of DEX volume over 24h, about $299K of protocol revenue, about $199K of holder revenue and zero current incentives, but its latest DEX pace is below the $2.83B seven-day average. RAY is around $1.47 and no credible fresh evidence was found that the previously documented multi-day spot-distribution regime has reversed through independent selective-wallet accumulation. RAY therefore does not cross a new paper-entry threshold.",
+    "RWA evidence remains differentiated between asset stock and actual usage. A recent Solana dataset showing roughly $807M of 30-day tokenized-stock DEX turnover, including about $560M through Raydium CLMM, is genuine secondary trading; separate roughly $348M 30-day RWA inflow figures are asset-flow measures rather than trading volume. These are continuation data rather than a new prospective catalyst in this run and do not create a fresh direct-token trade beyond the already-held AERO exposure to Base secondary trading.",
+    "Paper portfolio NAV is approximately $9,846.54 versus $9,855.14 for the frozen passive benchmark, trailing by about $8.60 or 8.73 bps. UNI and HYPE remain modestly below their all-in paper costs while AERO is modestly above its entry mark; none has crossed an add, trim, sell, or hard-gate threshold. State.json and the immutable trade ledger remain unchanged."
+  ],
+  "paper_trade": null,
+  "alert_threshold_crossed": false,
+  "notes": "Hourly prospective mark. No qualifying threshold, new material thesis break, or paper trade. State and immutable trade ledger left unchanged."
+}

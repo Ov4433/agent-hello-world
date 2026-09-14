@@ -1,0 +1,122 @@
+{
+  "timestamp_utc": "2026-09-07T19:55:00Z",
+  "framework_version": "crypto-regime-research-with-rwa-capital-signal",
+  "alert_type": "cross_ecosystem_leadership_broadening",
+  "ecosystem": "NEAR / NEAR Intents as privacy-regime infrastructure",
+  "candidate": {
+    "symbol": "NEAR",
+    "name": "NEAR Protocol",
+    "asset_type": "native network asset",
+    "contract_or_address": null,
+    "role": "cross-chain routing/value-capture infrastructure beneficiary of the ZEC/privacy regime"
+  },
+  "prior_regime_linkage": {
+    "source_regime": "ZEC/privacy",
+    "interpretation": "Leadership broadening, not displacement: ZEC remains the privacy-regime flagship while NEAR qualifies as a second-order infrastructure beneficiary capturing cross-chain privacy flow and protocol revenue."
+  },
+  "why_threshold_crossed_now": [
+    "NEAR Intents shows about $101.29M of 24-hour DEX volume, $769.83M over seven days and $2.972B over 30 days, with TVL around $136.25M and +54.5% TVL growth over 30 days.",
+    "Captured NEAR Intents protocol revenue is about $67,246 over 24 hours, $347,207 over seven days and $955,814 over 30 days; since February 23, 2026, captured Intents revenue is used to buy NEAR on the open market. Current protocol reporting shows zero incentives over the latest day, week, month and year.",
+    "Current reporting attributes a large share of Intents activity to ZEC-related pairs, while Zashi has an established history of routing privacy-asset swaps through NEAR Intents. This gives the privacy rally a measurable cross-ecosystem usage and value-capture path rather than merely correlated token prices.",
+    "On September 6, cbZEC went live on Rhea Finance, adding a path from wrapped ZEC into native shielded ZEC and collateral usage. Earlier September Rhea data showed more than $15M of 24-hour ZEC trading and 4,520 ZEC supplied as collateral, with ZEC market utilization raised from 30% to 70% effective September 1.",
+    "NEAR itself remains strongly confirmed versus the prior week/month: roughly $2.34, +28.6% over seven days and +47.2% over 30 days, with about $436.79M of 24-hour token turnover."
+  ],
+  "ecosystem_regime_evidence": {
+    "classification": "qualified cross-chain privacy infrastructure/value-capture broadening",
+    "near_l1": {
+      "dex_volume_24h_usd": 51100000,
+      "dex_volume_7d_usd": 201060000,
+      "dex_weekly_change_pct": 72.87,
+      "stablecoin_market_cap_usd": 104150000,
+      "stablecoin_change_7d_pct": -8.92,
+      "inflows_24h_usd": 4190000,
+      "active_addresses_24h": 74652,
+      "new_addresses_24h": 11690,
+      "transactions_24h": 763172
+    },
+    "interpretation": "DEX activity and daily inflow are accelerating, but falling stablecoin balances prevent classification as broad settlement-capital migration. The stronger signal is cross-chain routing/utilization and resulting NEAR value capture."
+  },
+  "why_flows_appear_speculative": {
+    "classification": "discretionary privacy/speculation flow transmitted through useful cross-chain products, with no current NEAR Intents incentive subsidy",
+    "clean_components": [
+      "NEAR Protocol reports zero incentives over the latest day, week, month and year.",
+      "Zashi integration is an established user-facing route for privacy-asset swaps rather than a points or quest campaign.",
+      "Rhea's cbZEC/native-ZEC path and ZEC collateral usage are product/composability catalysts rather than holder rewards."
+    ],
+    "discounted_components": [
+      "Rhea ZEC activity has been highly pair-concentrated, so raw DEX acceleration is not treated as independent proof of broad wallet migration.",
+      "The current 'NEAR as toll road/shovel seller for ZEC' narrative has been widely syndicated from a concentrated source set and receives limited attention credit."
+    ]
+  },
+  "leadership_rotation": {
+    "current": "ZEC remains the source-regime flagship; NEAR becomes a qualified second-order infrastructure/value-capture leader.",
+    "near_confirmation": "NEAR price persistence, token turnover, Intents utilization and captured-revenue buybacks are directionally aligned, stronger than a pure sympathy rally.",
+    "rhea_token_status": "RHEA is not promoted: standalone token liquidity/turnover are materially weaker and it lacks comparable price/liquidity confirmation despite Rhea protocol usage."
+  },
+  "wallet_quality": {
+    "score": "low_to_moderate",
+    "selective_wallet_convergence": "not established",
+    "identified_capital": "SVRN reported more than 55.5M NEAR holdings on August 27, said no NEAR was sold in its July restructuring, and has a stated long-term target to accumulate 10% of supply.",
+    "discount": "SVRN is a strategic treasury vehicle rather than a proven cohort of independent historically selective wallets; no smart-wallet convergence upgrade is awarded."
+  },
+  "narrative_and_news": {
+    "positive": [
+      "Established Zashi use of NEAR Intents for privacy-oriented swaps.",
+      "September 6 cbZEC launch on Rhea Finance and native shielded-ZEC/collateral composability.",
+      "Current NEAR price/turnover confirmation."
+    ],
+    "attention_quality": "mixed",
+    "influencer_promotion_risk": "The current 'shovel/toll-road' framing is concentrated enough that narrative-driven late buying is treated as a possible inverse signal if usage and price diverge."
+  },
+  "liquidity_and_executability": {
+    "result": "PASS",
+    "near_price_usd": 2.34,
+    "near_market_cap_usd": 3060000000,
+    "near_token_volume_24h_usd": 436790000,
+    "dex_share_of_token_volume_pct": 31.55,
+    "assessment": "Native NEAR has deep global centralized and decentralized market access and is not dependent on a creator-controlled microcap LP."
+  },
+  "structural_gate": {
+    "result": "PASS_WITH_INFLATION_AND_CONSENSUS_CAVEATS",
+    "sellability": "PASS - broad global liquidity and hundreds of millions of dollars in daily turnover.",
+    "honeypot_or_transfer_restriction": "NOT APPLICABLE as a token-contract risk; NEAR is the native network asset.",
+    "mint_freeze_admin_permissions": "No ERC-20/SPL-style creator mint, freeze, blacklist or proxy-admin surface applies to native NEAR; issuance is protocol-level.",
+    "lp_control": "No single creator-controlled LP is required for practical sellability.",
+    "supply": "NEAR has ongoing protocol issuance rather than a fixed capped supply; protocol inflation is partially offset by fee burns and Intents buybacks are not burned.",
+    "validator_concentration": "NearBlocks currently reports 414 current validators, about 620.47M NEAR staked and total supply about 1.306B. A September 1 snapshot put the top eight validator entries at roughly 33.5% of stake, a material but not disqualifying concentration caveat.",
+    "large_identified_holder": "SVRN's disclosed 55.5M+ NEAR position is roughly 4.25% of current supply and is treated as disclosed strategic concentration rather than hidden linked-wallet manipulation.",
+    "major_caveats": [
+      "Ongoing issuance means Intents buybacks must be evaluated against inflation rather than treated as pure deflation.",
+      "Consensus stake remains meaningfully concentrated among top validators.",
+      "NEAR L1 stablecoin balances are declining despite rising DEX activity and positive daily inflow.",
+      "Rhea ZEC trading is pair-concentrated and unique-trader/wash-trading decomposition remains incomplete."
+    ]
+  },
+  "major_uncertainties": [
+    "How much current Intents volume is durable user flow versus short-lived privacy-coin momentum.",
+    "How much Rhea ZEC activity represents independent discretionary wallets versus concentrated/reflexive trading.",
+    "Whether Intents captured revenue stays elevated after ZEC volatility normalizes.",
+    "Whether NEAR retains relative strength if ZEC cools.",
+    "Whether declining L1 stablecoin balances reverse and confirm broader settlement-capital migration.",
+    "Whether concentrated 'toll road' narrative attention becomes a late-stage inverse signal."
+  ],
+  "why_signal_matters_now": "The privacy regime is now creating measurable fee-bearing activity and recurring token demand outside its flagship. NEAR Intents is a cross-chain routing layer whose captured revenue buys NEAR, while Zashi and the new Rhea cbZEC/native-ZEC path provide product-level flow mechanisms. No credit is claimed for the rally before this timestamp. Persistence after ZEC leverage/headline attention normalizes would support the framework's ability to identify second-order infrastructure leadership; collapse with ZEC momentum should score this alert poorly.",
+  "sources": [
+    "https://defillama.com/protocol/near-intents",
+    "https://defillama.com/protocol/near-protocol",
+    "https://defillama.com/chain/near",
+    "https://www.panews.io/articles/01a07a82-521b-728d-9c52-a2fc422e2277",
+    "https://coinmarketcal.com/event/live-on-rhea-finance-15003599-1",
+    "https://www.nasdaq.com/press-release/nasdaq-listed-svrn-inc-completes-its-corporate-transformation-2026-08-27",
+    "https://nearblocks.io/validators"
+  ],
+  "prospective_outcomes": {
+    "+1h": null,
+    "+6h": null,
+    "+24h": null,
+    "+3d": null,
+    "+7d": null
+  },
+  "trade_created": false,
+  "paper_trade_created": false
+}

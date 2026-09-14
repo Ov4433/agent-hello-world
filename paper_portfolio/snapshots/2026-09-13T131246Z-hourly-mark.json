@@ -1,0 +1,63 @@
+{
+  "timestamp_utc": "2026-09-13T13:12:46Z",
+  "portfolio_id": "regime-framework-10k-2026-09-09",
+  "cash_usd": 3257.737519195861,
+  "marks_usd": {
+    "BTC": 76707.40,
+    "ETH": 2474.99,
+    "SOL": 99.76,
+    "SUI": 0.7114,
+    "BNB": 717.32,
+    "UNI": 6.20,
+    "HYPE": 77.24,
+    "AERO": 0.5628
+  },
+  "mark_sources": {
+    "BTC": "CoinGecko BTC/USD live page crawled 2026-09-13",
+    "ETH": "CoinGecko ETH/USD live page crawled 2026-09-13",
+    "SOL": "CoinGecko SOL/USD live page crawled 2026-09-13",
+    "SUI": "CoinGecko SUI/USD live page crawled 2026-09-13",
+    "BNB": "CoinGecko BNB/USD live page crawled 2026-09-13",
+    "UNI": "CoinMarketCap UNI/USD live page crawled 2026-09-13",
+    "HYPE": "CoinGecko HYPE/USD live page crawled 2026-09-13",
+    "AERO": "CoinMarketCap AERO/USD live page crawled 2026-09-13"
+  },
+  "position_values_usd": {
+    "BTC": 1940.5190880813275,
+    "ETH": 1976.9396052502327,
+    "SOL": 964.9835558135406,
+    "SUI": 438.2700837851162,
+    "BNB": 482.5238799945527,
+    "UNI": 238.06158955612162,
+    "HYPE": 240.54970191814425,
+    "AERO": 247.28400249827908
+  },
+  "portfolio_nav_usd": 9786.869026093176,
+  "passive_benchmark_nav_usd": 9803.23621292477,
+  "alpha_vs_benchmark_usd": -16.367186831594154,
+  "alpha_vs_benchmark_bps": -16.695697702372353,
+  "decisions": {
+    "BTC": "HOLD",
+    "ETH": "HOLD",
+    "SOL": "HOLD_NO_ADD_NO_FRESH_ECOSYSTEM_ACCELERATION_OR_SELECTIVE_WALLET_CONFIRMATION",
+    "SUI": "HOLD_NO_ADD_STABLECOIN_GROWTH_REMAINS_UNCONFIRMED_BY_CURRENT_DEX_ACCELERATION_OR_NET_FLOWS",
+    "BNB": "HOLD_NO_ADD_BSC_DAILY_DEX_PACE_BELOW_TRAILING_WEEK_AND_INCENTIVE_CONTAMINATION_REMAINS",
+    "UNI": "HOLD_NO_ADD_PRICE_BELOW_ENTRY_AND_PROTOCOL_ACCELERATION_HAS_COOLED_BUT_NO_VALUE_CAPTURE_OR_STRUCTURAL_THESIS_BREAK",
+    "HYPE": "HOLD_NO_ADD_PRICE_BELOW_ENTRY_AND_NO_NEW_POST_ENTRY_INDEPENDENT_ACCUMULATION_CONFIRMATION; PRIOR_BUYBACK_AND_OI_THESIS_NOT INVALIDATED",
+    "AERO": "HOLD_NO_ADD_BASE_AGGREGATE_DEX_ACTIVITY_IS_STRONGER_BUT_AERODROME_OWN_VOLUME_ONLY_MODESTLY_ABOVE_TRAILING_BASELINE_AND_NO_NEW_INDEPENDENT_WALLET_CONFIRMATION"
+  },
+  "regime_notes": [
+    "Base aggregate spot activity remains constructive: roughly $1.253B 24h DEX volume versus $6.775B over seven days, about 1.36x the preceding-six-day average. However Aerodrome itself is only about $513.7M/24h versus $3.266B/7d, about 1.12x its preceding-six-day average, so this does not independently confirm an AERO scale-up.",
+    "AERO is about $0.5628 versus the $0.5596 paper entry and $0.5615586 all-in cost. The Base tokenized-equity secondary-trading/value-capture thesis remains intact, but no fresh independent selective-wallet cohort or structural improvement appeared after entry.",
+    "Arbitrum shows a notable ecosystem-level burst: roughly $308.3M DEX volume/24h versus $1.241B/7d (about 1.98x the preceding-six-day average) and perps also above baseline. ARB is rejected as a qualifying paper candidate because holder-level value capture remains weak/pure-governance-like and a near-term token unlock overhang is active; ecosystem activity alone is insufficient.",
+    "Sui stablecoin supply is still growing strongly (about +9% over seven days), but current DEX volume remains below its trailing-week daily average, so stablecoin migration has not converted into confirmed discretionary speculation.",
+    "BSC weekly DEX growth remains large but the current daily pace is below the trailing-week average, stablecoin supply is flat/down, and BNC4-style trading/buyback incentives contaminate the activity signal. No clean candidate clears the full framework.",
+    "Robinhood Chain activity remains discounted because gas subsidies and previously identified synthetic-volume/maker-wallet contamination make raw volume and user counts unreliable as discretionary-capital evidence.",
+    "No new RWA secondary-trading or collateral-utilization evidence published after the AERO entry materially changes the ranking. The Nasdaq-Payward tokenized-equity infrastructure investment remains a broad catalyst, not a new token-specific confirmation.",
+    "UNI is about $6.20 versus $6.45 entry and HYPE about $77.24 versus $79.35 entry. Neither has developed a hard structural failure, persistent distribution reversal, or value-capture break sufficient to justify a trim or exit.",
+    "No new candidate crossed the alert/trade threshold and no existing position developed a material thesis/risk change requiring action."
+  ],
+  "paper_trade": null,
+  "alert_threshold_crossed": false,
+  "notes": "Hourly prospective mark only. No paper trade and no real trade. State and immutable trade ledger unchanged."
+}
