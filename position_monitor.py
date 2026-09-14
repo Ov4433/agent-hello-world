@@ -108,7 +108,7 @@ def evaluate(position: dict, pair: dict) -> dict:
 def main() -> None:
     try:
         position_path = os.getenv("POSITION_FILE", "positions/pons.json")
-        position = load_json_file(position_path, label="Position")
+        position = validate_position(load_json_file(position_path, label="Position"))
         pair = fetch_pair(position["contract"], position["pair_address"])
         result = evaluate(position, pair)
         print(json.dumps(result, indent=2, sort_keys=True))

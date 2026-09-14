@@ -43,4 +43,4 @@ jobs:
 
       - name: Validate workflow YAML
         run: |
-          ruby -e 'require "yaml"; Dir[".github/workflows/*.{yml,yaml}"].sort.each { |file| YAML.load_file(file) }; puts "Workflow YAML ok"'
+          ruby -e 'require "yaml"; Dir[".github/workflows/*.{yml,yaml}"].sort.each { |file| YAML.safe_load(File.read(file), permitted_classes: [], aliases: true) }; puts "Workflow YAML ok"'
