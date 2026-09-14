@@ -29,6 +29,7 @@ class PaperExecutorTests(unittest.TestCase):
         self.assertEqual(record["allowed_allocation_usd"], 100.0)
         self.assertAlmostEqual(record["simulated_fill_usd"], 0.50002, places=8)
         self.assertEqual(record["blocking_reasons"], [])
+        self.assertEqual(record["source_signal_timestamp"], "2026-09-02T22:34:00Z")
         self.assertEqual(record["source_signal_file"], "signals/example.json")
 
     def test_build_execution_record_rejects_invalid_signal(self) -> None:

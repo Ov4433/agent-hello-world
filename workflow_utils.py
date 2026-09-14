@@ -105,8 +105,10 @@ def require_int(data: dict[str, Any], key: str) -> int:
     raise ValueError(f"{key} must be an integer")
 
 
-def require_mapping(data: dict[str, Any], key: str, *, default: dict[str, Any] | None = None) -> dict[str, Any]:
-    value = data.get(key, default if default is not None else {})
+def require_mapping(data: dict[str, Any], key: str, *, default: dict[str, Any] | None = None) -> dict[str, Any] | None:
+    if key not in data:
+        return default
+    value = data.get(key)
     if not isinstance(value, dict):
         raise ValueError(f"{key} must be a JSON object")
     return dict(value)
