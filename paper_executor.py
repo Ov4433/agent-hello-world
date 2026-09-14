@@ -48,6 +48,18 @@ def load_signal() -> dict:
 
 
 def validate_signal(signal: dict) -> dict:
+    signal_timestamp = signal.get("signal_timestamp_utc")
+    if signal_timestamp is not None:
+        if not isinstance(signal_timestamp, str) or not signal_timestamp.strip():
+            raise ValueError("signal_timestamp_utc must be a non-empty string when provided")
+        signal_timestamp = signal_timestamp.strip()
+
+    signal_file = signal.get("signal_file")
+    if signal_file is not None:
+        if not isinstance(signal_file, str) or not signal_file.strip():
+            raise ValueError("signal_file must be a non-empty string when provided")
+        signal_file = signal_file.strip()
+
     validated = {
         "ecosystem": require_string(signal, "ecosystem"),
         "asset": require_string(signal, "asset"),
@@ -61,8 +73,8 @@ def validate_signal(signal: dict) -> dict:
         "max_liquidity_share_pct": require_float(signal, "max_liquidity_share_pct"),
         "thesis": require_string(signal, "thesis"),
         "research_evidence": require_mapping(signal, "research_evidence", default={}),
-        "signal_timestamp_utc": signal.get("signal_timestamp_utc"),
-        "signal_file": signal.get("signal_file"),
+        "signal_timestamp_utc": signal_timestamp,
+        "signal_file": signal_file,
     }
     if validated["max_slippage_pct"] < 0:
         raise ValueError("max_slippage_pct must be zero or positive")

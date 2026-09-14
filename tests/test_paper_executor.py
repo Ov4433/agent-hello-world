@@ -91,6 +91,27 @@ class PaperExecutorTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "paper_allocation_usd must be positive"):
             paper_executor.build_execution_record({**base_signal, "paper_allocation_usd": 0})
 
+    def test_build_execution_record_rejects_invalid_optional_metadata(self) -> None:
+        base_signal = {
+            "ecosystem": "Robinhood Chain",
+            "asset": "PONS",
+            "contract": "0xabc",
+            "venue": "Uniswap v3",
+            "observed_price_usd": 0.5,
+            "liquidity_usd": 5_000_000,
+            "structural_gate": "PASS",
+            "paper_allocation_usd": 100,
+            "max_slippage_pct": 1.0,
+            "max_liquidity_share_pct": 0.10,
+            "thesis": "Test thesis",
+        }
+
+        with self.assertRaisesRegex(ValueError, "signal_timestamp_utc must be a non-empty string"):
+            paper_executor.build_execution_record({**base_signal, "signal_timestamp_utc": 123})
+
+        with self.assertRaisesRegex(ValueError, "signal_file must be a non-empty string"):
+            paper_executor.build_execution_record({**base_signal, "signal_file": ""})
+
 
 if __name__ == "__main__":
     unittest.main()
