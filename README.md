@@ -16,15 +16,15 @@ No wallet access, transaction signing, exchange credentials, or extra infrastruc
 
 ## Repository layout
 
-- `/home/runner/work/agent-hello-world/agent-hello-world/agent.py`: fetches the current Bitcoin price and decides whether an alert should fire
-- `/home/runner/work/agent-hello-world/agent-hello-world/paper_executor.py`: converts a committed signal into a deterministic paper execution record
-- `/home/runner/work/agent-hello-world/agent-hello-world/position_monitor.py`: evaluates a saved paper position against live pair data
-- `/home/runner/work/agent-hello-world/agent-hello-world/.github/workflows/bitcoin-monitor.yml`: runs the Bitcoin alert workflow
-- `/home/runner/work/agent-hello-world/agent-hello-world/.github/workflows/paper-execution.yml`: runs the paper execution workflow
-- `/home/runner/work/agent-hello-world/agent-hello-world/.github/workflows/paper-position-monitor.yml`: runs the paper position monitor workflow
-- `/home/runner/work/agent-hello-world/agent-hello-world/signals/`: committed signal inputs
-- `/home/runner/work/agent-hello-world/agent-hello-world/positions/`: frozen paper positions
-- `/home/runner/work/agent-hello-world/agent-hello-world/observations/`: research observations and follow-up notes
+- `agent.py`: fetches the current Bitcoin price and decides whether an alert should fire
+- `paper_executor.py`: converts a committed signal into a deterministic paper execution record
+- `position_monitor.py`: evaluates a saved paper position against live pair data
+- `.github/workflows/bitcoin-monitor.yml`: runs the Bitcoin alert workflow
+- `.github/workflows/paper-execution.yml`: runs the paper execution workflow
+- `.github/workflows/paper-position-monitor.yml`: runs the paper position monitor workflow
+- `signals/`: committed signal inputs
+- `positions/`: frozen paper positions
+- `observations/`: research observations and follow-up notes
 
 ## Bitcoin alert
 
@@ -57,11 +57,11 @@ The paper execution workflow reads a committed JSON signal, applies deterministi
 - It never accesses a wallet
 - It preserves the execution record for later monitoring
 
-Run **Actions** → **Crypto paper execution** and provide a committed file from `/home/runner/work/agent-hello-world/agent-hello-world/signals/`, or let pushes to that directory trigger the workflow automatically.
+Run **Actions** → **Crypto paper execution** and provide a committed file from `signals/`, or let pushes to that directory trigger the workflow automatically.
 
 ## Paper position monitor
 
-The paper position monitor reads a saved position from `/home/runner/work/agent-hello-world/agent-hello-world/positions/`, fetches the live pair from DexScreener, and comments on the associated issue when:
+The paper position monitor reads a saved position from `positions/`, fetches the live pair from DexScreener, and comments on the associated issue when:
 
 - the position state changes
 - or the daily heartbeat has not been posted yet
