@@ -6,6 +6,7 @@ import json
 import os
 import time
 import urllib.request
+import uuid
 from pathlib import Path
 from typing import Any
 from urllib.error import URLError
@@ -20,8 +21,9 @@ DEFAULT_HEADERS = {
 def write_github_output(name: str, value: str) -> None:
     output_path = os.getenv("GITHUB_OUTPUT")
     if output_path:
+        delimiter = f"GITHUB_OUTPUT_{uuid.uuid4().hex}"
         with open(output_path, "a", encoding="utf-8") as output:
-            output.write(f"{name}={value}\n")
+            output.write(f"{name}<<{delimiter}\n{value}\n{delimiter}\n")
 
 
 def load_json_file(path_value: str, *, label: str) -> dict[str, Any]:
@@ -72,6 +74,8 @@ def require_string(data: dict[str, Any], key: str) -> str:
 
 def require_float(data: dict[str, Any], key: str) -> float:
     value = data.get(key)
+    if isinstance(value, bool):
+        raise ValueError(f"{key} must be a number")
     try:
         return float(value)
     except (TypeError, ValueError) as exc:

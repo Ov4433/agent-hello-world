@@ -68,6 +68,12 @@ def validate_signal(signal: dict) -> dict:
         raise ValueError("max_slippage_pct must be zero or positive")
     if validated["max_liquidity_share_pct"] <= 0:
         raise ValueError("max_liquidity_share_pct must be positive")
+    if validated["observed_price_usd"] <= 0:
+        raise ValueError("observed_price_usd must be positive")
+    if validated["liquidity_usd"] <= 0:
+        raise ValueError("liquidity_usd must be positive")
+    if validated["paper_allocation_usd"] <= 0:
+        raise ValueError("paper_allocation_usd must be positive")
     return validated
 
 

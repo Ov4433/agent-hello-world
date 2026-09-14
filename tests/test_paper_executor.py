@@ -67,6 +67,30 @@ class PaperExecutorTests(unittest.TestCase):
                 }
             )
 
+    def test_build_execution_record_rejects_non_positive_numeric_inputs(self) -> None:
+        base_signal = {
+            "ecosystem": "Robinhood Chain",
+            "asset": "PONS",
+            "contract": "0xabc",
+            "venue": "Uniswap v3",
+            "observed_price_usd": 0.5,
+            "liquidity_usd": 5_000_000,
+            "structural_gate": "PASS",
+            "paper_allocation_usd": 100,
+            "max_slippage_pct": 1.0,
+            "max_liquidity_share_pct": 0.10,
+            "thesis": "Test thesis",
+        }
+
+        with self.assertRaisesRegex(ValueError, "observed_price_usd must be positive"):
+            paper_executor.build_execution_record({**base_signal, "observed_price_usd": 0})
+
+        with self.assertRaisesRegex(ValueError, "liquidity_usd must be positive"):
+            paper_executor.build_execution_record({**base_signal, "liquidity_usd": 0})
+
+        with self.assertRaisesRegex(ValueError, "paper_allocation_usd must be positive"):
+            paper_executor.build_execution_record({**base_signal, "paper_allocation_usd": 0})
+
 
 if __name__ == "__main__":
     unittest.main()
