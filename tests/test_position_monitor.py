@@ -84,6 +84,16 @@ class PositionMonitorTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "issue_number must be an integer"):
             workflow_utils.require_int({"issue_number": True}, "issue_number")
 
+        with self.assertRaisesRegex(ValueError, "issue_number must be an integer"):
+            workflow_utils.require_int({"issue_number": "0x10"}, "issue_number")
+
+    def test_require_float_rejects_non_finite_values(self) -> None:
+        with self.assertRaisesRegex(ValueError, "price must be a finite number"):
+            workflow_utils.require_float({"price": "nan"}, "price")
+
+        with self.assertRaisesRegex(ValueError, "price must be a finite number"):
+            workflow_utils.require_float({"price": "inf"}, "price")
+
     def test_request_json_requires_positive_attempts(self) -> None:
         with self.assertRaisesRegex(ValueError, "attempts must be at least 1"):
             workflow_utils.request_json("https://example.com", attempts=0)

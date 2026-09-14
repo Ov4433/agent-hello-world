@@ -3,7 +3,9 @@
 from __future__ import annotations
 
 import json
+import math
 import os
+import re
 import time
 import urllib.request
 import uuid
@@ -77,30 +79,30 @@ def require_float(data: dict[str, Any], key: str) -> float:
     if isinstance(value, bool):
         raise ValueError(f"{key} must be a number")
     try:
-        return float(value)
+        parsed = float(value)
     except (TypeError, ValueError) as exc:
         raise ValueError(f"{key} must be a number") from exc
+    if not math.isfinite(parsed):
+        raise ValueError(f"{key} must be a finite number")
+    return parsed
 
 
 def require_int(data: dict[str, Any], key: str) -> int:
     value = data.get(key)
     if isinstance(value, bool):
         raise ValueError(f"{key} must be an integer")
+    if isinstance(value, int):
+        return value
     if isinstance(value, float):
         if not value.is_integer():
             raise ValueError(f"{key} must be an integer")
         return int(value)
     if isinstance(value, str):
         stripped = value.strip()
-        if not stripped:
+        if not re.fullmatch(r"[+-]?\d+", stripped):
             raise ValueError(f"{key} must be an integer")
-        if any(character in stripped for character in ".eE"):
-            raise ValueError(f"{key} must be an integer")
-        value = stripped
-    try:
-        return int(value)
-    except (TypeError, ValueError) as exc:
-        raise ValueError(f"{key} must be an integer") from exc
+        return int(stripped, 10)
+    raise ValueError(f"{key} must be an integer")
 
 
 def require_mapping(data: dict[str, Any], key: str, *, default: dict[str, Any] | None = None) -> dict[str, Any]:
