@@ -41,6 +41,9 @@ def load_json_file(path_value: str, *, label: str) -> dict[str, Any]:
 
 
 def request_json(url: str, *, headers: dict[str, str] | None = None, timeout: int = 20, attempts: int = 3) -> Any:
+    if attempts < 1:
+        raise ValueError("attempts must be at least 1")
+
     request_headers = dict(DEFAULT_HEADERS)
     if headers:
         request_headers.update(headers)
@@ -77,6 +80,19 @@ def require_float(data: dict[str, Any], key: str) -> float:
 
 def require_int(data: dict[str, Any], key: str) -> int:
     value = data.get(key)
+    if isinstance(value, bool):
+        raise ValueError(f"{key} must be an integer")
+    if isinstance(value, float):
+        if not value.is_integer():
+            raise ValueError(f"{key} must be an integer")
+        return int(value)
+    if isinstance(value, str):
+        stripped = value.strip()
+        if not stripped:
+            raise ValueError(f"{key} must be an integer")
+        if any(character in stripped for character in ".eE"):
+            raise ValueError(f"{key} must be an integer")
+        value = stripped
     try:
         return int(value)
     except (TypeError, ValueError) as exc:

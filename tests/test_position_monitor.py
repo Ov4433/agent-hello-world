@@ -1,6 +1,7 @@
 import unittest
 
 import position_monitor
+import workflow_utils
 
 
 class PositionMonitorTests(unittest.TestCase):
@@ -75,6 +76,17 @@ class PositionMonitorTests(unittest.TestCase):
                     "structural_gate": "PASS",
                 }
             )
+
+    def test_require_int_rejects_non_integral_values(self) -> None:
+        with self.assertRaisesRegex(ValueError, "issue_number must be an integer"):
+            workflow_utils.require_int({"issue_number": 2.5}, "issue_number")
+
+        with self.assertRaisesRegex(ValueError, "issue_number must be an integer"):
+            workflow_utils.require_int({"issue_number": True}, "issue_number")
+
+    def test_request_json_requires_positive_attempts(self) -> None:
+        with self.assertRaisesRegex(ValueError, "attempts must be at least 1"):
+            workflow_utils.request_json("https://example.com", attempts=0)
 
 
 if __name__ == "__main__":
