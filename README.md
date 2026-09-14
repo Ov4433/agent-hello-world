@@ -1,6 +1,6 @@
 # Agent Hello World
 
-A small GitHub Actions automation repo that uses Python scripts plus GitHub Issues as an audit trail and notification layer.
+A small GitHub Actions automation repo centered on a **paper-only crypto research and monitoring workflow**, with a simpler Bitcoin alert kept as a secondary example.
 
 Current flows in this repository:
 
@@ -25,6 +25,18 @@ No wallet access, transaction signing, exchange credentials, or extra infrastruc
 - `signals/`: committed signal inputs
 - `positions/`: frozen paper positions
 - `observations/`: research observations and follow-up notes
+
+## Paper workflow
+
+This is the main story of the repository:
+
+1. A committed file in `signals/` captures a research signal.
+2. **Crypto paper execution** freezes sizing, slippage assumptions, and risk rules into a GitHub issue.
+3. A saved file in `positions/` records the frozen paper position.
+4. **Paper position monitor** re-checks that position against live DexScreener data.
+5. GitHub issue comments become the monitoring log for state changes and daily heartbeat updates.
+
+Manual paper execution runs default to `signals/example.json`, and manual paper monitor runs can target a different position file when needed.
 
 ## Bitcoin alert
 
@@ -69,8 +81,10 @@ The paper position monitor reads a saved position from `positions/`, fetches the
 
 Possible states include `HOLD`, `SCALE_READY`, `TP1`, `TP2`, `STOP`, `STRUCTURAL_FAIL`, and `LIQUIDITY_WARNING`.
 
+Manual runs can override the default position file in **Actions** → **Paper position monitor**.
+
 ## Notes
 
 - GitHub Issues and comments are used as the visible log of alerts, simulated trades, and monitoring updates.
 - Workflow output names are part of the contract between the Python scripts and the workflow files.
-- The repo currently mixes a simple public demo with a more opinionated paper-trading research flow, so the README focuses on explaining both clearly rather than pretending it is only one thing.
+- The repo intentionally keeps the Bitcoin alert as a lightweight demo, but the paper workflow is the primary operating path.
