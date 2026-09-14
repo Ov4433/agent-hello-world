@@ -47,6 +47,7 @@ The default threshold is **$150,000**. To change it:
 3. Set it to the target price, such as `125000`.
 
 The scheduled run uses that threshold and will not create duplicates while an open issue titled **Bitcoin price alert** already exists.
+Close that issue when you want the monitor to be able to alert again.
 
 ## Paper execution
 
