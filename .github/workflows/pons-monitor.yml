@@ -34,27 +34,27 @@ jobs:
           FORCE_ALERT: ${{ github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.force_alert) }}
         run: python3 agent.py
 
-      - name: Check for an existing alert
+      - name: Report alert
         if: steps.pons.outputs.should_alert == 'true'
-        id: existing
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          count="$(gh issue list --state open --search 'PONS price alert in:title' --json number --jq 'length')"
-          echo "count=$count" >> "$GITHUB_OUTPUT"
-
-      - name: Create GitHub issue alert
-        if: steps.pons.outputs.should_alert == 'true' && steps.existing.outputs.count == '0'
         env:
           GH_TOKEN: ${{ github.token }}
           PRICE: ${{ steps.pons.outputs.price }}
           THRESHOLD: ${{ steps.pons.outputs.threshold }}
           FORCED: ${{ steps.pons.outputs.forced }}
         run: |
-          gh issue create \
-            --title "PONS price alert" \
-            --body "PONS is currently **\$${PRICE} USD**.
-
-          Configured threshold: **\$${THRESHOLD} USD**
-          Forced test alert: **${FORCED}**
-          Workflow run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          echo "::warning title=PONS price alert::PONS is \$${PRICE} USD (threshold \$${THRESHOLD}, forced: ${FORCED})"
+          {
+            echo "## PONS price alert"
+            echo "PONS is currently **\$${PRICE} USD** (threshold **\$${THRESHOLD} USD**, forced: **${FORCED}**)"
+          } >> "$GITHUB_STEP_SUMMARY"
+          has_issues="$(gh repo view --json hasIssuesEnabled --jq .hasIssuesEnabled)"
+          if [ "$has_issues" != "true" ]; then
+            echo "Issues are disabled; skipping issue creation."
+            exit 0
+          fi
+          count="$(gh issue list --state open --search 'PONS price alert in:title' --json number --jq 'length')"
+          if [ "$count" = "0" ]; then
+            gh issue create \
+              --title "PONS price alert" \
+              --body "PONS is currently **\$${PRICE} USD**. Threshold: **\$${THRESHOLD} USD**. Run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          fi
